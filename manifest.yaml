@@ -1,0 +1,33 @@
+version: 0.0.1
+type: plugin
+author: yanguiyoubing
+name: suffix_fix
+label:
+  en_US: suffix_fix
+  zh_Hans: 后缀修正
+  ja_JP: サフィックス修正
+description:
+  en_US: Suffixes that support correction include .md, .json, .html, .txt, .docx, .doc, .xlsx, .csv, .xls, .pdf, .pptx, .ppt, .jpg, .jpeg, .png
+  zh_Hans: 支持修正的后缀包括.md, .json, .html, .txt, .docx, .doc, .xlsx, .csv, .xls, .pdf, .pptx, .ppt, .jpg, .jpeg, .png
+  ja_JP: 修正をサポートする拡張子には、.md、.json、.html、.txt、.docx、.doc、.xlsx、.csv、.xls、.pdf、.pptx、.ppt、.jpg、.jpeg、.png が含まれます。
+icon: icon.svg
+resource:
+  memory: 268435456
+  permission:
+    tool:
+      enabled: true
+plugins:
+  tools:
+    - provider/suffix_fix.yaml
+meta:
+  version: 0.0.1
+  arch:
+    - amd64
+    - arm64
+  runner:
+    language: python
+    version: "3.12"
+    entrypoint: main
+created_at: 2025-01-17T09:12:10.043335+08:00
+privacy: PRIVACY.md
+verified: false

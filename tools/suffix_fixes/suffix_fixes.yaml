@@ -1,0 +1,37 @@
+identity:
+  name: suffix_fixes
+  author: yanguiyoubing
+  label:
+    en_US: suffix_fixes
+    zh_Hans: 后缀修正
+description:
+  human:
+    en_US: Fix the suffix of the file
+    zh_Hans: 修正文件的后缀
+  llm: Fix the suffix of the file
+parameters:
+  - name: input_file
+    type: file
+    required: true
+    label:
+      en_US: Input File
+      zh_Hans: 输入的文件
+    human_description:
+      en_US: Input File
+      zh_Hans: 输入的文件
+    llm_description: input file
+    form: llm
+  - name: file_name
+    type: string
+    required: true
+    label:
+      en_US: file_name
+      zh_Hans: 文件名(含后缀)
+    human_description:
+      en_US: file_name
+      zh_Hans: 文件名(含后缀)
+    llm_description: File name (with suffix)
+    form: llm
+extra:
+  python:
+    source: tools/suffix_fixes/suffix_fixes.py
